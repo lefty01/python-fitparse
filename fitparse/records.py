@@ -13,7 +13,7 @@ class RecordBase(object):
         # WARNING: use of map(None, l1, l2) equivalent to zip_longest in py3k
         for slot_name, value in map(None, self.__slots__, args):
             setattr(self, slot_name, value)
-        for slot_name, value in kwargs.iteritems():
+        for slot_name, value in kwargs.items():
             setattr(self, slot_name, value)
 
 
